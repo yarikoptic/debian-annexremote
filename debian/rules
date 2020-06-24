@@ -1,0 +1,18 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+export PYBUILD_NAME=annexremote
+
+export PYBUILD_BEFORE_TEST=cp -r {dir}/tests {build_dir}
+export PYBUILD_AFTER_TEST=rm -rf {build_dir}/tests
+
+%:
+	dh $@ --with python3 --buildsystem=pybuild
+
+override_dh_auto_test:
+	dh_auto_test -- --test-nose
+
+clean::
+	dh_clean
+	-rm -rf __pycache__ build .pybuild annexremote.egg-info dist
+	-find . -name __pycache__ -type d -exec rm -rf {} \;
