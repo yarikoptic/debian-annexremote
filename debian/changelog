@@ -1,5 +1,9 @@
 annexremote (1.4.3-1) UNRELEASED; urgency=medium
 
+  [ Michael Hanke ]
   * Initial Debian packaging (Closes: #963593).
 
- -- Michael Hanke <mih@debian.org>  Wed, 24 Jun 2020 10:09:42 +0200
+  [ Yaroslav Halchenko ]
+  * Add python3-future to Build-Depends (install_requires)
+
+ -- Yaroslav Halchenko <debian@onerussian.com>  Thu, 16 Jul 2020 17:07:37 -0400

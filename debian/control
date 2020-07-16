@@ -6,6 +6,7 @@ Uploaders: Michael Hanke <mih@debian.org>
 Build-Depends: debhelper-compat (= 12),
                dh-python,
                python3-all,
+               python3-future,
                python3-nose,
                python3-setuptools,
 Standards-Version: 4.5.0
